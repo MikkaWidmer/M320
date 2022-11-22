@@ -9,7 +9,7 @@ public class TipGame {
 
     public void run() {
         do {
-            int goalTeam1 = this.calculator.getRandomNumber();
+            int goalTeam1 = calculator.getRandomNumber();
             int goalTeam2 = calculator.getRandomNumber();
             System.out.println("Tipp Team 1");
             int tip1 = scanner.nextInt();
