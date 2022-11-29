@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * @version 1.0.0
+ */
 public class Main {
     private static final TipGame tipGame = new TipGame();
 
