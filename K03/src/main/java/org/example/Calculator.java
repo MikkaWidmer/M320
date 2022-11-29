@@ -17,8 +17,11 @@ public class Calculator {
         return random.nextInt(max - min + 1) + min;
     }
 
-    public String calculateScore(int tip1, int tip2, int goal1, int goal2){
-        if (tip2 == goal2 && tip1 == goal1){
+    public String calculateScore(int tip1, int tip2, int goal1, int goal2) throws IncorrectInputException{
+        if (tip1 < 0 || tip2 < 0|| goal1 < 0 || goal2 < 0){
+            throw new IncorrectInputException("Number is negative");
+        }
+        else if (tip2 == goal2 && tip1 == goal1){
             points = points + 3;
             return "Correct Result!!";
         } else if (tip1 > tip2 && goal1 > goal2||tip1 < tip2 && goal1 < goal2) {
