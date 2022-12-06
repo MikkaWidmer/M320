@@ -1,6 +1,6 @@
 ### Exception Class
 
-Die Klasse Exception und ihre Unterklassen sind eine Form von Throwable, die Bedingungen anzeigt, die eine vernünftige Anwendung möglicherweise abfangen möchte. Die Klasse Exception und alle Unterklassen, die nicht auch Unterklassen von RuntimeException sind, sind geprüfte Ausnahmen.
+Die Klasse Exception und ihre Unterklassen sind eine Form von Throwable, die Bedingungen anzeigt, die eine vernünftige Anwendung möglicherweise abfangen möchte. Die Klasse Exception und alle Unterklassen, die nicht auch Unterklassen von RuntimeException sind, sind geprüfte Ausnahmen. Runtime Exceptions werden nur zur laufzeit gefunden.
 
 ### throws
 
