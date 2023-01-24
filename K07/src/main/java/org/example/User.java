@@ -1,28 +1,20 @@
 package org.example;
 
-public class User implements Comparable<User>{
-    private final int age;
-    private final String name;
-
-    public User(int age, String name) {
-        this.age = age;
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
+public record User(int age, String name) implements Comparable<User> {
 
     @Override
     public int compareTo(User u) {
-        if (getName() == null || u.getName() == null) {
+        if (name() == null || u.name() == null) {
             return 0;
         }
-        return getName().compareTo(u.getName());
+        return name().compareTo(u.name());
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+               "age=" + age +
+               ", name='" + name + '\'' +
+               '}';
+    }
 }
