@@ -17,24 +17,6 @@ public class ShapeCollection {
 
     }
 
-/*    public void getSumOfAlRanges() {
-        double sum = 0;
-        for (Shape shape : getCollection()) {
-            sum += shape.getRange();
-        }
-        System.out.println(sum);
-    }*/
-
-/*
-    public void getSumOfAlAreas() {
-        double sum = 0;
-        for (Shape shape : getCollection()) {
-            sum += shape.getArea();
-        }
-        System.out.println(sum);
-    }
-*/
-
     public BoundingBox getSuperBoundigngBox() {
         int top = Integer.MIN_VALUE;
         int bottom = Integer.MAX_VALUE;

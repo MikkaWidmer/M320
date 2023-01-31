@@ -5,6 +5,8 @@ public class Triangle extends Shape implements Polygon {
     private final int kathete2;
     private final int hypothenuse;
     private final int hight;
+    private int corners;
+
 
 
     public Triangle(int kathete1, int kathete2, int hypothenuse, int hight, String kind, int x, int y) {
@@ -68,7 +70,15 @@ public class Triangle extends Shape implements Polygon {
 
     @Override
     public void countCorners() {
+        this.corners = 3;
     }
 
+    public int getCorners() {
+        return corners;
+    }
+
+    public void setCorners(int corners) {
+        this.corners = corners;
+    }
 }
 

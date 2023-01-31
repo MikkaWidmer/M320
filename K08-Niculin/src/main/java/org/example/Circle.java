@@ -3,6 +3,7 @@ package org.example;
 public class Circle extends Shape implements Polygon {
     private final int durchmesser;
     private final int radius;
+    private int corners;
 
     public Circle(String kind, int durchmesser, int x, int y) {
         super(kind, x, y);
@@ -42,6 +43,7 @@ public class Circle extends Shape implements Polygon {
 
     @Override
     public void countCorners() {
+        this.corners = 0;
     }
 
     public int getDurchmesser() {
@@ -54,5 +56,13 @@ public class Circle extends Shape implements Polygon {
 
     public double getPi() {
         return 3.14;
+    }
+
+    public int getCorners() {
+        return corners;
+    }
+
+    public void setCorners(int corners) {
+        this.corners = corners;
     }
 }

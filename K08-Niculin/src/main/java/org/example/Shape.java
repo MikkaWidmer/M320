@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class Shape {
+public abstract class Shape implements Polygon {
 
     private final String kind;
     private final int y;
@@ -29,4 +29,5 @@ public abstract class Shape {
     public int getX() {
         return x;
     }
+
 }

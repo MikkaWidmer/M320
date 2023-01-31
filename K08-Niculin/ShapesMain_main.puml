@@ -1,0 +1,344 @@
+@startuml
+participant Actor
+Actor -> ShapesMain : main
+activate ShapesMain
+ShapesMain -> CalculateLoop : run
+activate CalculateLoop
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : next
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> String : toUpperCase
+activate String
+String --> CalculateLoop
+deactivate String
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+create Triangle
+CalculateLoop -> Triangle : new
+activate Triangle
+create Shape
+Triangle -> Shape : new
+activate Shape
+Shape --> Triangle
+deactivate Shape
+Triangle --> CalculateLoop
+deactivate Triangle
+CalculateLoop -> ShapeCollection : addShape
+activate ShapeCollection
+ShapeCollection -> ShapeCollection : getCollection
+activate ShapeCollection
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+ShapeCollection -> List : add
+activate List
+List --> ShapeCollection
+deactivate List
+ShapeCollection --> CalculateLoop
+deactivate ShapeCollection
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+create Scanner
+CalculateLoop -> Scanner : new
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+CalculateLoop -> Scanner : nextInt
+activate Scanner
+Scanner --> CalculateLoop
+deactivate Scanner
+create Circle
+CalculateLoop -> Circle : new
+activate Circle
+create Shape
+Circle -> Shape : new
+activate Shape
+Shape --> Circle
+deactivate Shape
+Circle --> CalculateLoop
+deactivate Circle
+CalculateLoop -> ShapeCollection : addShape
+activate ShapeCollection
+ShapeCollection -> ShapeCollection : getCollection
+activate ShapeCollection
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+ShapeCollection -> List : add
+activate List
+List --> ShapeCollection
+deactivate List
+ShapeCollection --> CalculateLoop
+deactivate ShapeCollection
+create InvalidTypeException
+CalculateLoop -> InvalidTypeException : new
+activate InvalidTypeException
+create Exception
+InvalidTypeException -> Exception : new
+activate Exception
+Exception --> InvalidTypeException
+deactivate Exception
+InvalidTypeException --> CalculateLoop
+deactivate InvalidTypeException
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+CalculateLoop -> String : equals
+activate String
+String --> CalculateLoop
+deactivate String
+CalculateLoop -> ShapeCollection : printCollection
+activate ShapeCollection
+ShapeCollection -> ShapeCollection : getCollection
+activate ShapeCollection
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+ShapeCollection -> PrintStream : println
+activate PrintStream
+PrintStream --> ShapeCollection
+deactivate PrintStream
+ShapeCollection --> CalculateLoop
+deactivate ShapeCollection
+CalculateLoop -> Triangle : getBoundigBox
+activate Triangle
+Triangle -> Shape : getY
+activate Shape
+Shape --> Triangle
+deactivate Shape
+Triangle -> Triangle : getHight
+activate Triangle
+Triangle --> Triangle
+deactivate Triangle
+Triangle -> Shape : getY
+activate Shape
+Shape --> Triangle
+deactivate Shape
+Triangle -> Shape : getX
+activate Shape
+Shape --> Triangle
+deactivate Shape
+Triangle -> Triangle : getHypothenuse
+activate Triangle
+Triangle --> Triangle
+deactivate Triangle
+Triangle -> Shape : getX
+activate Shape
+Shape --> Triangle
+deactivate Shape
+create BoundingBox
+Triangle -> BoundingBox : new
+activate BoundingBox
+BoundingBox --> Triangle
+deactivate BoundingBox
+Triangle --> CalculateLoop
+deactivate Triangle
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+CalculateLoop -> ShapeCollection : getSuperBoundigngBox
+activate ShapeCollection
+ShapeCollection -> ShapeCollection : calculateTop
+activate ShapeCollection
+ShapeCollection -> Shape : getBoundigBox
+activate Shape
+Shape --> ShapeCollection
+deactivate Shape
+ShapeCollection -> BoundingBox : getTop
+activate BoundingBox
+BoundingBox --> ShapeCollection
+deactivate BoundingBox
+ShapeCollection -> Math : max
+activate Math
+Math --> ShapeCollection
+deactivate Math
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+ShapeCollection -> ShapeCollection : calculateBottom
+activate ShapeCollection
+ShapeCollection -> Shape : getBoundigBox
+activate Shape
+Shape --> ShapeCollection
+deactivate Shape
+ShapeCollection -> BoundingBox : getBottom
+activate BoundingBox
+BoundingBox --> ShapeCollection
+deactivate BoundingBox
+ShapeCollection -> Math : min
+activate Math
+Math --> ShapeCollection
+deactivate Math
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+ShapeCollection -> ShapeCollection : calculateRight
+activate ShapeCollection
+ShapeCollection -> Shape : getBoundigBox
+activate Shape
+Shape --> ShapeCollection
+deactivate Shape
+ShapeCollection -> BoundingBox : getRight
+activate BoundingBox
+BoundingBox --> ShapeCollection
+deactivate BoundingBox
+ShapeCollection -> Math : max
+activate Math
+Math --> ShapeCollection
+deactivate Math
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+ShapeCollection -> ShapeCollection : calculateLeft
+activate ShapeCollection
+ShapeCollection -> Shape : getBoundigBox
+activate Shape
+Shape --> ShapeCollection
+deactivate Shape
+ShapeCollection -> BoundingBox : getLeft
+activate BoundingBox
+BoundingBox --> ShapeCollection
+deactivate BoundingBox
+ShapeCollection -> Math : min
+activate Math
+Math --> ShapeCollection
+deactivate Math
+ShapeCollection --> ShapeCollection
+deactivate ShapeCollection
+create BoundingBox
+ShapeCollection -> BoundingBox : new
+activate BoundingBox
+BoundingBox --> ShapeCollection
+deactivate BoundingBox
+ShapeCollection --> CalculateLoop
+deactivate ShapeCollection
+CalculateLoop -> PrintStream : println
+activate PrintStream
+PrintStream --> CalculateLoop
+deactivate PrintStream
+CalculateLoop -> Triangle : countCorners
+activate Triangle
+Triangle --> CalculateLoop
+deactivate Triangle
+CalculateLoop --> ShapesMain
+deactivate CalculateLoop
+ShapesMain -> PrintStream : println
+activate PrintStream
+PrintStream --> ShapesMain
+deactivate PrintStream
+return
+@enduml
